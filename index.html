@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetLuxe | Premium Pet Care</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="PetLuxe home">
+          <span class="brand-mark">P</span>
+          <span>
+            <strong>PetLuxe</strong>
+            <small data-i18n="brandTag">高端宠物生活</small>
+          </span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#home" class="active" data-i18n="navHome">总览</a>
+          <a href="#plans" data-i18n="navPlans">会员权益</a>
+          <a href="#store" data-i18n="navStore">精选商城</a>
+          <a href="#cyber" data-i18n="navCyber">Cyber养宠</a>
+          <a href="#care" data-i18n="navCare">护理服务</a>
+          <a href="#account" data-i18n="navAccount">我的订单</a>
+        </nav>
+
+        <div class="pet-switch">
+          <button class="pet-chip active" data-pet="luna">Luna</button>
+          <button class="pet-chip" data-pet="milo">Milo</button>
+        </div>
+
+        <button class="language-toggle" type="button" data-lang-toggle>
+          <span>中文</span>
+          <b>EN</b>
+        </button>
+      </aside>
+
+      <main>
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" data-i18n="topEyebrow">AI 宠物健康与高端消费平台</p>
+            <h1 id="heroTitle" data-i18n="heroTitle">把宠物照护，变成高复购的精品生意。</h1>
+          </div>
+          <div class="top-actions">
+            <button class="ghost-action user-pill" type="button" data-open-auth>
+              <span data-i18n="loginRegister">登录 / 注册</span>
+            </button>
+            <button class="primary-action" type="button" data-open-checkout>
+              <span data-i18n="ctaStart">开启会员</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14m-6-6 6 6-6 6" />
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <section class="hero-grid" id="home">
+          <article class="hero-panel">
+            <div class="hero-copy">
+              <p class="pill" data-i18n="heroPill">Premium pet wellness app</p>
+              <h2 data-i18n="heroSubTitle">会员订阅、智能问诊、精选好物，一套完成变现。</h2>
+              <p data-i18n="heroBody">
+                面向养宠家庭提供宠物档案、健康提醒、AI 护理建议和高品质产品推荐，用订阅制与精选商城提升客单价。
+              </p>
+              <div class="hero-actions">
+                <button class="primary-action dark" type="button" data-scroll="#plans">
+                  <span data-i18n="seeRevenue">查看会员权益</span>
+                </button>
+                <button class="ghost-action" type="button" data-scroll="#store" data-i18n="browseStore">
+                  浏览精选商品
+                </button>
+              </div>
+            </div>
+            <figure class="hero-photo">
+              <img
+                src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1200&q=85"
+                alt="A person relaxing with a dog"
+              />
+            </figure>
+          </article>
+
+          <aside class="insight-panel">
+            <div class="pet-card">
+              <img
+                id="petAvatar"
+                src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=600&q=80"
+                alt="Pet profile"
+              />
+              <div>
+                <p data-i18n="currentPet">当前宠物</p>
+                <h3 id="petName">Luna</h3>
+                <span id="petMeta" data-i18n="petMetaLuna">金毛 · 3 岁 · 活跃</span>
+              </div>
+            </div>
+            <div class="score-ring" aria-label="Pet wellness score">
+              <span id="wellnessScore">92</span>
+              <small data-i18n="wellnessScore">健康指数</small>
+            </div>
+            <div class="mini-stats">
+              <div>
+                <strong id="nextCare">2h</strong>
+                <span data-i18n="nextCare">下次喂食</span>
+              </div>
+              <div>
+                <strong id="subscriptionValue">$79</strong>
+                <span data-i18n="subValue">月订阅</span>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section-head" id="plans">
+          <p class="eyebrow" data-i18n="revenueEyebrow">Member Benefits</p>
+          <h2 data-i18n="revenueTitle">成为会员后，宠物照护更省心</h2>
+        </section>
+
+        <section class="revenue-grid">
+          <article class="revenue-card featured">
+            <span class="card-icon">01</span>
+            <h3 data-i18n="planOneTitle">高级会员订阅</h3>
+            <p data-i18n="planOneBody">月费包含健康提醒、AI 护理建议、疫苗/驱虫日历和专属客服。</p>
+            <strong data-i18n="planOneValue">24/7</strong>
+          </article>
+          <article class="revenue-card">
+            <span class="card-icon">02</span>
+            <h3 data-i18n="planTwoTitle">精选商品佣金</h3>
+            <p data-i18n="planTwoBody">围绕粮食、营养品、智能设备和美容护理做高毛利推荐。</p>
+            <strong data-i18n="planTwoValue">会员价</strong>
+          </article>
+          <article class="revenue-card">
+            <span class="card-icon">03</span>
+            <h3 data-i18n="planThreeTitle">保险与医疗转化</h3>
+            <p data-i18n="planThreeBody">将健康档案转化为保险、在线问诊和线下医院预约。</p>
+            <strong data-i18n="planThreeValue">优先预约</strong>
+          </article>
+          <article class="revenue-card">
+            <span class="card-icon">04</span>
+            <h3 data-i18n="planFourTitle">上门护理服务</h3>
+            <p data-i18n="planFourBody">美容、寄养、遛狗、训练课程可做平台抽佣和会员加购。</p>
+            <strong data-i18n="planFourValue">一键预订</strong>
+          </article>
+        </section>
+
+        <section class="store-section" id="store">
+          <div class="section-head inline">
+            <div>
+              <p class="eyebrow" data-i18n="storeEyebrow">Curated Shop</p>
+              <h2 data-i18n="storeTitle">精选高客单宠物好物</h2>
+            </div>
+            <div class="segmented" role="tablist" aria-label="Product categories">
+              <button class="active" type="button" data-category="all" data-i18n="catAll">全部</button>
+              <button type="button" data-category="health" data-i18n="catHealth">健康</button>
+              <button type="button" data-category="smart" data-i18n="catSmart">智能</button>
+            </div>
+          </div>
+
+          <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <section class="cyber-section" id="cyber">
+          <div class="section-head inline">
+            <div>
+              <p class="eyebrow" data-i18n="cyberEyebrow">Cyber Pets</p>
+              <h2 data-i18n="cyberTitle">Cyber养宠：收养你的电子宠物</h2>
+            </div>
+            <button class="primary-action dark" type="button" data-open-cyber-name>
+              <span data-i18n="renameCyber">给它取名</span>
+            </button>
+          </div>
+
+          <div class="cyber-grid">
+            <article class="cyber-stage">
+              <div class="cyber-orbit">
+                <div class="cyber-pet" id="cyberPetAvatar">
+                  <span id="cyberPetIcon">◆</span>
+                </div>
+              </div>
+              <p class="pill" data-i18n="activeCyberPet">当前电子宠物</p>
+              <h3 id="cyberPetName">Nova</h3>
+              <p id="cyberPetMeta">Aurora Cat · Neon</p>
+              <div class="cyber-stats">
+                <span><b id="cyberMood">96</b><small data-i18n="mood">心情</small></span>
+                <span><b id="cyberEnergy">82</b><small data-i18n="energy">能量</small></span>
+                <span><b id="cyberCloset">1</b><small data-i18n="closet">装扮</small></span>
+              </div>
+            </article>
+
+            <article class="cyber-panel">
+              <h3 data-i18n="chooseCyberPet">选择可购买电子宠物</h3>
+              <div class="cyber-list" id="cyberPetList"></div>
+            </article>
+
+            <article class="cyber-panel">
+              <h3 data-i18n="cyberShopTitle">皮肤与食物商店</h3>
+              <div class="cyber-list" id="cyberItemList"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="commerce-strip">
+          <article>
+            <span data-i18n="flowOne">1. 注册账号</span>
+            <strong data-i18n="flowOneBody">沉淀会员资料与复购标签</strong>
+          </article>
+          <article>
+            <span data-i18n="flowTwo">2. 购买商品</span>
+            <strong data-i18n="flowTwoBody">模拟付款后订单自动生成物流</strong>
+          </article>
+          <article>
+            <span data-i18n="flowThree">3. 订阅升级</span>
+            <strong data-i18n="flowThreeBody">支付成功后自动变为 Plus 会员</strong>
+          </article>
+        </section>
+
+        <section class="care-section" id="care">
+          <div class="care-copy">
+            <p class="eyebrow" data-i18n="careEyebrow">Smart Care</p>
+            <h2 data-i18n="careTitle">把日常照护做成可续费体验</h2>
+            <p data-i18n="careBody">
+              用户每天记录饮食、运动、体重和异常症状，系统自动生成建议与购买清单，形成更自然的复购路径。
+            </p>
+          </div>
+          <div class="care-console">
+            <div class="console-head">
+              <span data-i18n="assistantTitle">AI 护理顾问</span>
+              <button type="button" data-generate-tip data-i18n="refreshTip">换一条建议</button>
+            </div>
+            <p id="careTip"></p>
+            <div class="progress-list">
+              <label>
+                <span data-i18n="hydration">饮水</span>
+                <meter min="0" max="100" value="82"></meter>
+              </label>
+              <label>
+                <span data-i18n="activity">运动</span>
+                <meter min="0" max="100" value="68"></meter>
+              </label>
+              <label>
+                <span data-i18n="nutrition">营养</span>
+                <meter min="0" max="100" value="91"></meter>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="account-section" id="account">
+          <div class="section-head inline">
+            <div>
+              <p class="eyebrow" data-i18n="accountEyebrow">Customer Center</p>
+              <h2 data-i18n="accountTitle">我的会员与物流</h2>
+            </div>
+            <button class="ghost-action" type="button" data-open-auth data-i18n="manageAccount">登录查看</button>
+          </div>
+          <div class="account-grid">
+            <article class="account-card">
+              <span data-i18n="memberStatus">会员状态</span>
+              <strong id="memberStatusText">Guest</strong>
+              <p id="memberEmailText" data-i18n="guestHint">登录后可购买商品、查看物流和订阅会员。</p>
+            </article>
+            <article class="account-card">
+              <span data-i18n="lastOrder">最近订单</span>
+              <strong id="lastOrderText">-</strong>
+              <button class="ghost-action" type="button" data-open-tracking data-i18n="viewTracking">查看物流</button>
+            </article>
+            <article class="account-card">
+              <span data-i18n="ownerIncome">老板收款演示</span>
+              <strong id="ownerIncomeText">$0</strong>
+              <p data-i18n="ownerIncomeHint">前端模拟收款，真实上线需接支付网关。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="admin-section" id="admin" hidden>
+          <div class="section-head inline">
+            <div>
+              <p class="eyebrow" data-i18n="adminEyebrow">Owner Dashboard</p>
+              <h2 data-i18n="adminTitle">管理员后台</h2>
+            </div>
+            <button class="ghost-action" type="button" data-admin-logout data-i18n="adminLogout">退出后台</button>
+          </div>
+
+          <div class="admin-metrics">
+            <article><span data-i18n="metricRevenue">总收款</span><strong id="metricRevenue">$0</strong></article>
+            <article><span data-i18n="metricMembers">注册会员</span><strong id="metricMembers">0</strong></article>
+            <article><span data-i18n="metricOrders">订单数量</span><strong id="metricOrders">0</strong></article>
+            <article><span data-i18n="metricPlus">Plus 会员</span><strong id="metricPlus">0</strong></article>
+          </div>
+
+          <div class="admin-grid">
+            <form class="admin-card" id="productForm">
+              <h3 data-i18n="addProductTitle">添加商品</h3>
+              <label><span data-i18n="fieldNameZh">中文名称</span><input name="nameZh" required /></label>
+              <label><span data-i18n="fieldNameEn">英文名称</span><input name="nameEn" required /></label>
+              <label><span data-i18n="fieldDescZh">中文描述</span><input name="descZh" required /></label>
+              <label><span data-i18n="fieldDescEn">英文描述</span><input name="descEn" required /></label>
+              <label><span data-i18n="fieldPrice">价格 USD</span><input name="price" type="number" min="1" required /></label>
+              <label><span data-i18n="fieldCategory">分类</span>
+                <select name="category">
+                  <option value="health">Health</option>
+                  <option value="smart">Smart</option>
+                  <option value="care">Care</option>
+                  <option value="service">Service</option>
+                </select>
+              </label>
+              <button class="primary-action dark full" type="submit" data-i18n="saveProduct">保存商品</button>
+            </form>
+
+            <article class="admin-card wide">
+              <h3 data-i18n="editPricesTitle">商品与价格管理</h3>
+              <div class="admin-list" id="adminProductList"></div>
+            </article>
+
+            <article class="admin-card">
+              <h3 data-i18n="membersTitle">注册会员列表</h3>
+              <div class="admin-list" id="adminMemberList"></div>
+            </article>
+
+            <form class="admin-card" id="layoutForm">
+              <h3 data-i18n="layoutTitle">网页布局设置</h3>
+              <label><span data-i18n="layoutTheme">首页风格</span>
+                <select name="theme">
+                  <option value="fresh">Fresh Luxe</option>
+                  <option value="editorial">Editorial</option>
+                  <option value="compact">Compact Sales</option>
+                </select>
+              </label>
+              <label><span data-i18n="layoutHero">首页标题</span><input name="heroTitle" /></label>
+              <button class="primary-action dark full" type="submit" data-i18n="saveLayout">应用布局</button>
+            </form>
+
+            <form class="admin-card" id="paymentForm">
+              <h3 data-i18n="paymentTitle">老板收款设置</h3>
+              <label><span data-i18n="paymentMethod">收款方式</span>
+                <select name="method">
+                  <option value="Stripe">Stripe</option>
+                  <option value="PayPal">PayPal</option>
+                  <option value="Alipay">Alipay</option>
+                  <option value="WeChat Pay">WeChat Pay</option>
+                </select>
+              </label>
+              <label><span data-i18n="paymentAccount">收款账号</span><input name="account" placeholder="boss@petluxe.com" /></label>
+              <button class="primary-action dark full" type="submit" data-i18n="savePayment">保存收款设置</button>
+            </form>
+
+            <article class="admin-card tina-card">
+              <h3 data-i18n="tinaTitle">TinaCMS 内容管理</h3>
+              <p data-i18n="tinaBody">用 TinaCMS 编辑商品、Cyber 宠物、皮肤食物、首页标题和收款设置。</p>
+              <a class="primary-action dark full" href="/admin/index.html" target="_blank" rel="noreferrer" data-i18n="openTina">打开 TinaCMS</a>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="checkout-modal" id="checkoutModal">
+      <form method="dialog">
+        <button class="modal-close" aria-label="Close">×</button>
+        <p class="eyebrow" data-i18n="modalEyebrow">Premium Plan</p>
+        <h2 data-i18n="modalTitle">PetLuxe Plus</h2>
+        <p data-i18n="modalBody">包含 AI 护理、商品会员价、健康提醒、护理服务优先预约。</p>
+        <div class="modal-price">
+          <strong>$29</strong>
+          <span data-i18n="perMonth">/月</span>
+        </div>
+        <button class="primary-action dark full" value="close" data-subscribe-pay data-i18n="modalCta">确认体验</button>
+      </form>
+    </dialog>
+
+    <dialog class="checkout-modal" id="authModal">
+      <form method="dialog" id="authForm">
+        <button class="modal-close" aria-label="Close">×</button>
+        <p class="eyebrow" data-i18n="authEyebrow">Account</p>
+        <h2 data-i18n="authTitle">登录或注册</h2>
+        <label><span data-i18n="authName">昵称</span><input name="name" placeholder="Michele" /></label>
+        <label><span data-i18n="authEmail">邮箱</span><input name="email" type="email" required placeholder="you@example.com" /></label>
+        <label><span data-i18n="authPassword">密码</span><input name="password" type="password" required placeholder="******" /></label>
+        <button class="primary-action dark full" type="submit" data-i18n="authSubmit">登录 / 注册</button>
+      </form>
+    </dialog>
+
+    <dialog class="checkout-modal" id="productCheckoutModal">
+      <form method="dialog" id="productCheckoutForm">
+        <button class="modal-close" aria-label="Close">×</button>
+        <p class="eyebrow" data-i18n="payEyebrow">Secure Checkout</p>
+        <h2 id="checkoutProductName">Product</h2>
+        <p id="checkoutProductDesc"></p>
+        <div class="modal-price">
+          <strong id="checkoutProductPrice">$0</strong>
+          <span data-i18n="payToOwner">付给店铺老板</span>
+        </div>
+        <p class="payment-note" id="paymentAccountText"></p>
+        <label><span data-i18n="shippingAddress">收货地址</span><input name="address" required placeholder="123 Pet Street" /></label>
+        <button class="primary-action dark full" type="submit" data-i18n="payNow">模拟支付并下单</button>
+      </form>
+    </dialog>
+
+    <dialog class="checkout-modal" id="trackingModal">
+      <form method="dialog">
+        <button class="modal-close" aria-label="Close">×</button>
+        <p class="eyebrow" data-i18n="trackingEyebrow">Logistics</p>
+        <h2 data-i18n="trackingTitle">物流详情</h2>
+        <div class="tracking-timeline" id="trackingTimeline"></div>
+      </form>
+    </dialog>
+
+    <dialog class="checkout-modal" id="adminLoginModal">
+      <form method="dialog" id="adminLoginForm">
+        <button class="modal-close" aria-label="Close">×</button>
+        <p class="eyebrow" data-i18n="adminLoginEyebrow">Owner Only</p>
+        <h2 data-i18n="adminLoginTitle">管理员登录</h2>
+        <label><span data-i18n="adminPassword">后台密码</span><input name="password" type="password" required placeholder="admin123" /></label>
+        <button class="primary-action dark full" type="submit" data-i18n="adminLoginSubmit">进入后台</button>
+      </form>
+    </dialog>
+
+    <dialog class="checkout-modal" id="cyberNameModal">
+      <form method="dialog" id="cyberNameForm">
+        <button class="modal-close" aria-label="Close">×</button>
+        <p class="eyebrow" data-i18n="cyberNameEyebrow">Cyber Pet</p>
+        <h2 data-i18n="cyberNameTitle">给电子宠物取名</h2>
+        <label><span data-i18n="cyberNameField">宠物名字</span><input name="name" required placeholder="Nova" /></label>
+        <button class="primary-action dark full" type="submit" data-i18n="saveCyberName">保存名字</button>
+      </form>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "petluxe-cyber-pet-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "python3 -m http.server 5173",
+    "tina:dev": "tinacms dev -c \"python3 -m http.server 5173\"",
+    "tina:build": "tinacms build"
+  },
+  "dependencies": {
+    "tinacms": "latest",
+    "@tinacms/cli": "latest"
+  },
+  "devDependencies": {}
+}

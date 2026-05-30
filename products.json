@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": "p1",
+      "nameZh": "冷冻干营养主粮",
+      "nameEn": "Freeze-dried nutrition meal",
+      "descZh": "关节与毛发配方",
+      "descEn": "Joint and coat formula",
+      "category": "health",
+      "price": 68,
+      "image": "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+      "id": "p2",
+      "nameZh": "智能喂食净水站",
+      "nameEn": "Smart feeder water station",
+      "descZh": "远程控制与饮水监测",
+      "descEn": "Remote control and hydration tracking",
+      "category": "smart",
+      "price": 189,
+      "image": "https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+      "id": "p3",
+      "nameZh": "皮毛护理礼盒",
+      "nameEn": "Coat care ritual box",
+      "descZh": "香波、梳理、护爪套装",
+      "descEn": "Shampoo, brush, and paw care set",
+      "category": "care",
+      "price": 92,
+      "image": "https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+      "id": "p4",
+      "nameZh": "肠胃益生菌订阅",
+      "nameEn": "Probiotic subscription",
+      "descZh": "30 天定制补充计划",
+      "descEn": "30-day tailored supplement plan",
+      "category": "health",
+      "price": 39,
+      "image": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+      "id": "p5",
+      "nameZh": "GPS 轻奢项圈",
+      "nameEn": "GPS luxe collar",
+      "descZh": "定位、防丢、运动记录",
+      "descEn": "Location, safety, and activity tracking",
+      "category": "smart",
+      "price": 129,
+      "image": "https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+      "id": "p6",
+      "nameZh": "上门美容预约",
+      "nameEn": "In-home grooming booking",
+      "descZh": "认证美容师上门服务",
+      "descEn": "Certified groomer at your door",
+      "category": "service",
+      "price": 85,
+      "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=700&q=80"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "id": "skin-neon",
+      "type": "skin",
+      "nameZh": "霓虹机甲皮肤",
+      "nameEn": "Neon Mecha Skin",
+      "price": 6,
+      "palette": "neon"
+    },
+    {
+      "id": "skin-pearl",
+      "type": "skin",
+      "nameZh": "珍珠云朵皮肤",
+      "nameEn": "Pearl Cloud Skin",
+      "price": 5,
+      "palette": "pearl"
+    },
+    {
+      "id": "food-star",
+      "type": "food",
+      "nameZh": "星星能量罐",
+      "nameEn": "Starlight Energy Can",
+      "price": 3,
+      "energy": 12
+    },
+    {
+      "id": "food-salmon",
+      "type": "food",
+      "nameZh": "赛博三文鱼",
+      "nameEn": "Cyber Salmon",
+      "price": 4,
+      "energy": 18
+    }
+  ]
+}
