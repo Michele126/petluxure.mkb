@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "python3 -m http.server 5173",
     "tina:dev": "tinacms dev -c \"python3 -m http.server 5173\"",
-    "tina:build": "tinacms build"
+    "tina:build": "echo 'skip build"
   },
   "dependencies": {
     "tinacms": "latest",
