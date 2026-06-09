@@ -1,13 +1,12 @@
+// tina/config.ts
 import { defineConfig } from "tinacms";
-
-const bilingualFields = [
-  { type: "string", name: "nameZh", label: "中文名称", isTitle: true, required: true },
+var bilingualFields = [
+  { type: "string", name: "nameZh", label: "\u4E2D\u6587\u540D\u79F0", isTitle: true, required: true },
   { type: "string", name: "nameEn", label: "English Name", required: true },
-  { type: "string", name: "descZh", label: "中文描述" },
+  { type: "string", name: "descZh", label: "\u4E2D\u6587\u63CF\u8FF0" },
   { type: "string", name: "descEn", label: "English Description" }
-] as const;
-
-export default defineConfig({
+];
+var config_default = defineConfig({
   branch: "main",
   clientId: process.env.TINA_CLIENT_ID || "local",
   token: process.env.TINA_TOKEN || "local",
@@ -25,7 +24,7 @@ export default defineConfig({
     collections: [
       {
         name: "siteSettings",
-        label: "网站设置 / Site Settings",
+        label: "\u7F51\u7AD9\u8BBE\u7F6E / Site Settings",
         path: "content",
         format: "json",
         match: {
@@ -35,23 +34,23 @@ export default defineConfig({
           {
             type: "string",
             name: "theme",
-            label: "首页风格",
+            label: "\u9996\u9875\u98CE\u683C",
             options: ["fresh", "editorial", "compact"]
           },
-          { type: "string", name: "heroTitleZh", label: "中文首页标题" },
+          { type: "string", name: "heroTitleZh", label: "\u4E2D\u6587\u9996\u9875\u6807\u9898" },
           { type: "string", name: "heroTitleEn", label: "English Hero Title" },
           {
             type: "string",
             name: "paymentMethod",
-            label: "收款方式",
+            label: "\u6536\u6B3E\u65B9\u5F0F",
             options: ["Stripe", "PayPal", "Alipay", "WeChat Pay"]
           },
-          { type: "string", name: "paymentAccount", label: "老板收款账号" }
+          { type: "string", name: "paymentAccount", label: "\u8001\u677F\u6536\u6B3E\u8D26\u53F7" }
         ]
       },
       {
         name: "products",
-        label: "商品管理 / Products",
+        label: "\u5546\u54C1\u7BA1\u7406 / Products",
         path: "content",
         format: "json",
         match: {
@@ -61,29 +60,29 @@ export default defineConfig({
           {
             type: "object",
             name: "items",
-            label: "商品列表",
+            label: "\u5546\u54C1\u5217\u8868",
             list: true,
             ui: {
-              itemProps: (item) => ({ label: item?.nameZh || item?.nameEn || "商品" })
+              itemProps: (item) => ({ label: item?.nameZh || item?.nameEn || "\u5546\u54C1" })
             },
             fields: [
-              { type: "string", name: "id", label: "商品 ID", required: true },
+              { type: "string", name: "id", label: "\u5546\u54C1 ID", required: true },
               ...bilingualFields,
               {
                 type: "string",
                 name: "category",
-                label: "分类",
+                label: "\u5206\u7C7B",
                 options: ["health", "smart", "care", "service"]
               },
-              { type: "number", name: "price", label: "价格 USD", required: true },
-              { type: "string", name: "image", label: "图片 URL" }
+              { type: "number", name: "price", label: "\u4EF7\u683C USD", required: true },
+              { type: "string", name: "image", label: "\u56FE\u7247 URL" }
             ]
           }
         ]
       },
       {
         name: "cyberPets",
-        label: "Cyber 电子宠物",
+        label: "Cyber \u7535\u5B50\u5BA0\u7269",
         path: "content",
         format: "json",
         match: {
@@ -93,32 +92,32 @@ export default defineConfig({
           {
             type: "object",
             name: "items",
-            label: "电子宠物列表",
+            label: "\u7535\u5B50\u5BA0\u7269\u5217\u8868",
             list: true,
             ui: {
               itemProps: (item) => ({ label: item?.nameZh || item?.nameEn || "Cyber Pet" })
             },
             fields: [
-              { type: "string", name: "id", label: "宠物 ID", required: true },
-              { type: "string", name: "nameZh", label: "中文名称", required: true },
+              { type: "string", name: "id", label: "\u5BA0\u7269 ID", required: true },
+              { type: "string", name: "nameZh", label: "\u4E2D\u6587\u540D\u79F0", required: true },
               { type: "string", name: "nameEn", label: "English Name", required: true },
-              { type: "string", name: "icon", label: "图标" },
+              { type: "string", name: "icon", label: "\u56FE\u6807" },
               {
                 type: "string",
                 name: "palette",
-                label: "配色",
+                label: "\u914D\u8272",
                 options: ["aurora", "pixel", "moon"]
               },
-              { type: "number", name: "price", label: "价格 USD" },
-              { type: "number", name: "mood", label: "初始心情" },
-              { type: "number", name: "energy", label: "初始能量" }
+              { type: "number", name: "price", label: "\u4EF7\u683C USD" },
+              { type: "number", name: "mood", label: "\u521D\u59CB\u5FC3\u60C5" },
+              { type: "number", name: "energy", label: "\u521D\u59CB\u80FD\u91CF" }
             ]
           }
         ]
       },
       {
         name: "cyberItems",
-        label: "Cyber 皮肤与食物",
+        label: "Cyber \u76AE\u80A4\u4E0E\u98DF\u7269",
         path: "content",
         format: "json",
         match: {
@@ -128,29 +127,29 @@ export default defineConfig({
           {
             type: "object",
             name: "items",
-            label: "皮肤与食物列表",
+            label: "\u76AE\u80A4\u4E0E\u98DF\u7269\u5217\u8868",
             list: true,
             ui: {
               itemProps: (item) => ({ label: item?.nameZh || item?.nameEn || "Cyber Item" })
             },
             fields: [
-              { type: "string", name: "id", label: "道具 ID", required: true },
+              { type: "string", name: "id", label: "\u9053\u5177 ID", required: true },
               {
                 type: "string",
                 name: "type",
-                label: "类型",
+                label: "\u7C7B\u578B",
                 options: ["skin", "food"]
               },
-              { type: "string", name: "nameZh", label: "中文名称", required: true },
+              { type: "string", name: "nameZh", label: "\u4E2D\u6587\u540D\u79F0", required: true },
               { type: "string", name: "nameEn", label: "English Name", required: true },
-              { type: "number", name: "price", label: "价格 USD" },
+              { type: "number", name: "price", label: "\u4EF7\u683C USD" },
               {
                 type: "string",
                 name: "palette",
-                label: "皮肤配色",
+                label: "\u76AE\u80A4\u914D\u8272",
                 options: ["neon", "pearl"]
               },
-              { type: "number", name: "energy", label: "食物增加能量" }
+              { type: "number", name: "energy", label: "\u98DF\u7269\u589E\u52A0\u80FD\u91CF" }
             ]
           }
         ]
@@ -158,3 +157,6 @@ export default defineConfig({
     ]
   }
 });
+export {
+  config_default as default
+};

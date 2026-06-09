@@ -1,0 +1,52 @@
+fragment SiteSettingsParts on SiteSettings {
+  __typename
+  theme
+  heroTitleZh
+  heroTitleEn
+  paymentMethod
+  paymentAccount
+}
+
+fragment ProductsParts on Products {
+  __typename
+  items {
+    __typename
+    id
+    nameZh
+    nameEn
+    descZh
+    descEn
+    category
+    price
+    image
+  }
+}
+
+fragment CyberPetsParts on CyberPets {
+  __typename
+  items {
+    __typename
+    id
+    nameZh
+    nameEn
+    icon
+    palette
+    price
+    mood
+    energy
+  }
+}
+
+fragment CyberItemsParts on CyberItems {
+  __typename
+  items {
+    __typename
+    id
+    type
+    nameZh
+    nameEn
+    price
+    palette
+    energy
+  }
+}
